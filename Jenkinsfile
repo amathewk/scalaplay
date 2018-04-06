@@ -5,9 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                ansiColor('xterm') {
-                    sh "sbt ';clean ;compile ;doc'"
-                }
+                sh "sbt ';clean ;compile ;doc'"
             }
         }
         stage('Test') {
